@@ -9,10 +9,14 @@ $( document ).ready(function() {
 		{	
 			$(".hauptnavi li").slideToggle("slow");
 			$(".meta").fadeToggle("fast");
-		})
+		});
+		
 	/*Klickweiterschaltung*/
 		$('.screens').click(function()
-		{ankerVor();})
+		{	
+			loadScreen();
+			ankerVor();
+			});
  
 	
 	/*Navigation*/
@@ -184,6 +188,17 @@ function ankerZurueck(){
 		screenZeigen (gibAnkerInt());	
 	}
     
+}
+
+function loadScreen(){
+	
+	$(".modal").show();
+	var s = 0;
+	if (s == 0){
+	setTimeout(function(){
+	$(".modal").fadeOut("fast");
+							 }, 700);	
+						}
 }
 
 
